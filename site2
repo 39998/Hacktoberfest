@@ -1,0 +1,12 @@
+server {
+    listen 6790;
+    server_name localhost;  # 替换为您的域名或IP地址
+
+    root /www/2;  # 替换为您的网站根目录
+
+    index index.html index.htm;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+}
